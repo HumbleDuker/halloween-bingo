@@ -686,6 +686,16 @@ function renderCompleted() {
     renderBoard(null),
     h('details', {}, h('summary', { text: `Claim history (${state.history.length})` }), historyList(state.history)),
     h('div', { class: 'stack', style: { marginTop: '24px' } },
+      h('button', {
+        class: 'btn', text: '↩ Reopen Game',
+        onclick: () => {
+          if (!confirm('Reopen this game?\n\nThe board, claims and history are kept and play continues.')) return;
+          state.status = 'active';
+          state.completedAt = null;
+          commit();
+          scrollTop();
+        },
+      }),
       h('button', { class: 'btn primary', onclick: startNewGame, text: 'Start New Game' }),
       h('button', { class: 'btn danger', onclick: resetGame, text: 'Reset / Delete Game' }),
     ),
