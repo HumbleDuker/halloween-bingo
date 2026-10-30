@@ -1,0 +1,11 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "bingo",
+      "runtimeExecutable": "powershell.exe",
+      "runtimeArgs": ["-NoProfile", "-ExecutionPolicy", "Bypass", "-File", "C:\\Users\\ltwie\\AppData\\Local\\Temp\\claude\\C--Users-ltwie--claude-spares-spare-HB6zy8\\f5a65b02-0a5b-48f9-919c-4e94ff81eaed\\scratchpad\\serve.ps1", "-Root", "C:\\Conurbation\\Projects\\halloween-bingo"],
+      "port": 8765
+    }
+  ]
+}
